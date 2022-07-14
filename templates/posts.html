@@ -52,20 +52,18 @@
 <body>
 
     <div class="header">
-        <h2>blog in django</h2>
+        <h2>Tomi's Blog</h2>
     </div>
 
     <div class="row">
         <div class="leftcolumn">
-            {% for post in posts reversed %}
             <div class="card">
-                <a style="text-decoration: none; color: gray;" href="/post/{{post.id}}">
-                    <h2>{{post.title}}</h2>
-                    <h5>{{post.time_created}}</h5>
-                    <p>{{post.body|truncatewords:40}}</p>
-                </a>
+                <h1>{{posts.title}}</h1>
+                <br>
+                <h5>{{posts.time_created}}</h5>
+                <br>
+                <p>{{posts.body}}</p>
             </div>
-            {% endfor %}
         </div>
     </div>
 
